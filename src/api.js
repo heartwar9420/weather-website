@@ -1,6 +1,5 @@
-import { CWA_API_KEY } from "./config.js";
 const BASE_URL = "https://opendata.cwa.gov.tw/api/v1/rest/datastore";
-const AUTH = CWA_API_KEY;
+const AUTH = "rdec-key-123-45678-011121314";
 
 function ok(renderData) {
   return { ok: true, renderData };
@@ -91,9 +90,9 @@ export async function getCard2RenderData(city) {
     const minT = mins.length ? Math.min(...mins) : null;
     const maxT = maxs.length ? Math.max(...maxs) : null;
 
-    // 溫度條固定 0~45
-    const RANGE_MIN = 0;
-    const RANGE_MAX = 45;
+    // 溫度條固定 10~35
+    const RANGE_MIN = 10;
+    const RANGE_MAX = 25;
     const range = RANGE_MAX - RANGE_MIN;
     const clamp = (x) => Math.min(RANGE_MAX, Math.max(RANGE_MIN, x));
 

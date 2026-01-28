@@ -1,7 +1,6 @@
 :root {
   color-scheme: dark;
   --bg: #0d1414;
-  --overlay: rgba(12, 18, 18, 0.55);
   --card: #2f3b3a;
   --pill: #465654;
   --pill-muted: rgba(70, 86, 84, 0.25);
@@ -36,11 +35,11 @@ body {
   color: var(--text-strong);
 }
 
-.overlay {
+/* .overlay {
   position: absolute;
   inset: 0;
   background: var(--overlay);
-}
+} */
 
 .is-hidden {
   display: none;
@@ -209,9 +208,10 @@ body {
 }
 
 .card {
-  background: var(--card);
   border-radius: 18px;
   padding: 20px;
+  background: transparent;
+  backdrop-filter: blur(10px);
 }
 
 .card-title {
