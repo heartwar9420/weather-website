@@ -9,3 +9,10 @@
 ![Forcast頁面](https://github.com/rachelL-tech/weather-website/blob/develop/design/website_png%20/Forecast.png)
 
 -   新增.gitignore
+
+## 1/27 竣鵬
+-   提交index.html, style.css 初版
+
+## 1/27 映叡
+-   修改home頁面的card2 layout及資訊入圖
+![Home頁面 card2](https://github.com/rachelL-tech/weather-website/blob/develop/design/website_png%20/card2-modified.png)

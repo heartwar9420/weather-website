@@ -11,155 +11,80 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="weather-icons.css">
   </head>
   <body>
     <div class="screen">
       <div class="overlay"></div>
 
-      <header class="top">
-        <div class="brand">weather.com</div>
-        <nav class="nav">
-          <button type="button"class="pill active btn">首頁</button>
-          <button type="button"class="pill btn">天氣預報</button>
+      <header class="nav-bar">
+        <nav class="nav-bar__menu">
+          <button id="homePageBtn" type="button"class="nav-bar__btn btn">首頁</button>
+          <button id="forecastPageBtn" type="button"class="nav-bar__btn btn">天氣預報</button>
         </nav>
       </header>
 
       <main class="dashboard">
-        <section class="left">
-          <div class="temp-row">
-            <div class="temp">23°C</div>
-            <img class="temp-icon" src="design/icons/rainy.png" alt="Rainy" />
-          </div>
 
-          <div id="current-location" class="location">台北市</div>
+        <section class="dashboard__overview">
+
+          <div class="current-weather">
+            <div class="current-weather__temp">23°C</div>
+          </div>
+          <div class="current-weather__location">臺北市</div>
 
           <div class="location-panel">
-            <input type="text" id="current-search" class="location-search" placeholder="搜尋地區"></input>
-            <div class="location-list">
-              <button class="location-item active btn">Watermelon Park</button>
-              <button class="location-item btn">Downtown</button>
-              <button class="location-item btn">Harbor</button>
-              <button class="location-item btn">Mountain</button>
+            <input type="text" id="current-search" class="location-panel__search" placeholder="搜尋地區"></input>
+            <div class="location-panel__list">
+              <button class="location-panel__item location-panel__item--active btn">Watermelon Park</button>
+              <button class="location-panel__item btn">Downtown</button>
+              <button class="location-panel__item btn">Harbor</button>
+              <button class="location-panel__item btn">Mountain</button>
             </div>
           </div>
 
-          <div class="time">目前時間10:43 | 最高溫:32° 最低溫:18°</div>
         </section>
 
-        <section class="right">
+        <section class="dashboard__details">
           <article class="card">
-            <div class="card-title">預計於凌晨零時許出現雷雨。</div>
-            <div class="divider"></div>
-            <div class="hourly">
-              <div class="hour">
-                <div class="hour-label">現在</div>
-                <img src="design/icons/rainy.png" alt="Rainy" />
-                <div class="hour-temp">23°C</div>
-              </div>
-              <div class="hour">
-                <div class="hour-label">00</div>
-                <img src="design/icons/rainy.png" alt="Rainy" />
-                <div class="hour-temp">21°C</div>
-              </div>
-              <div class="hour">
-                <div class="hour-label">01</div>
-                <img src="design/icons/rainy.png" alt="Rainy" />
-                <div class="hour-temp">20°C</div>
-              </div>
-              <div class="hour">
-                <div class="hour-label">02</div>
-                <img src="design/icons/rainy.png" alt="Rainy" />
-                <div class="hour-temp">20°C</div>
-              </div>
-              <div class="hour">
-                <div class="hour-label">03</div>
-                <img src="design/icons/wind.png" alt="Cloudy" />
-                <div class="hour-temp">23°C</div>
-              </div>
-              <div class="hour">
-                <div class="hour-label">04</div>
-                <img src="design/icons/wind.png" alt="Cloudy" />
-                <div class="hour-temp">23°C</div>
-              </div>
-            </div>
+            <div class="hourly-forecast"></div>
           </article>
 
           <article class="card">
-            <div class="card-title">未來五天預報</div>
-            <div class="divider"></div>
-            <div class="forecast-mini">
-              <div class="forecast-row">
-                <div class="day">今天</div>
-                <img src="icons/rainy.png" alt="Rainy" />
-                <div class="min">18°C</div>
-                <div class="bar">
-                  <div class="bar-fill" style="width: 150px"></div>
-                </div>
-                <div class="max">32°C</div>
-              </div>
-              <div class="forecast-row">
-                <div class="day">週四</div>
-                <img src="icons/rainy.png" alt="Rainy" />
-                <div class="min">20°C</div>
-                <div class="bar">
-                  <div class="bar-fill" style="width: 130px"></div>
-                </div>
-                <div class="max">29°C</div>
-              </div>
-              <div class="forecast-row">
-                <div class="day">週五</div>
-                <img src="icons/rainy.png" alt="Rainy" />
-                <div class="min">23°C</div>
-                <div class="bar">
-                  <div class="bar-fill" style="width: 120px"></div>
-                </div>
-                <div class="max">31°C</div>
-              </div>
-              <div class="forecast-row">
-                <div class="day">週六</div>
-                <img src="icons/sun.png" alt="Sunny" />
-                <div class="min">22°C</div>
-                <div class="bar">
-                  <div class="bar-fill" style="width: 110px"></div>
-                </div>
-                <div class="max">29°C</div>
-              </div>
-              <div class="forecast-row">
-                <div class="day">週日</div>
-                <img src="icons/rainy.png" alt="Rainy" />
-                <div class="min">23°C</div>
-                <div class="bar">
-                  <div class="bar-fill" style="width: 160px"></div>
-                </div>
-                <div class="max">33°C</div>
-              </div>
-            </div>
-          </article>
+            <div class="card__title">今日、明日氣象摘要</div>
+              <div id ="c2-error" class="card__error">123</div>
 
-          <article class="card">
-            <div class="card-title">明日氣象摘要</div>
-            <div class="divider"></div>
-            <div class="highlights">
-              <div class="highlight">
-                <div class="label">天氣</div>
-                <div class="value">下雨</div>
+              <div id ="c2-row" class="temp-bar">
+                
+                <div id ="c2-min" class="temp-bar__min">--°C</div>
+                <div class="temp-bar__track">
+                  <div id ="c2-bar" class="temp-bar__range"></div>
+                </div>
+                <div id="c2-max" class="temp-bar__max">--°C</div>
               </div>
-              <div class="highlight">
-                <div class="label">相對濕度</div>
-                <div class="value">84%</div>
+
+            <div id="c2-highlights" class="info-grid">
+
+              <div class="info-grid__item">
+                <div class="info-grid__label">天氣</div>
+                <div id="c2-weather" class="info-grid__value">--</div>
               </div>
-              <div class="highlight">
-                <div class="label">舒適度</div>
-                <div class="value">65%</div>
+
+              <div class="info-grid__item">
+                <div class="info-grid__label">舒適度</div>
+                <div id="c2-comfort" class="info-grid__value">--</div>
               </div>
-              <div class="highlight">
-                <div class="label">降雨機率</div>
-                <div class="value">70%</div>
+
+              <div class="info-grid__item">
+                <div class="info-grid__label">降雨機率</div>
+                <div id="c2-rain" class="info-grid__value">--%</div>
               </div>
+
             </div>
           </article>
         </section>
       </main>
-    </div>
+    <script type="module" src="/src/main.js"></script>
   </body>
 </html>

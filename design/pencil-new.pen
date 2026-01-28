@@ -507,7 +507,7 @@
                   "id": "5nGUE",
                   "name": "card2Title",
                   "fill": "#E6ECEB",
-                  "content": "Today's Highlights",
+                  "content": "Today & Tomorrow's Highlights",
                   "fontFamily": "Inter",
                   "fontSize": 16,
                   "fontWeight": "normal"
@@ -519,7 +519,7 @@
                   "width": "fill_container",
                   "height": 41,
                   "layout": "vertical",
-                  "gap": 16,
+                  "gap": 14,
                   "children": [
                     {
                       "type": "frame",
@@ -527,8 +527,8 @@
                       "name": "rowToday",
                       "width": "fill_container",
                       "height": 36,
-                      "gap": 12,
-                      "justifyContent": "space_between",
+                      "gap": 55,
+                      "justifyContent": "center",
                       "alignItems": "center",
                       "children": [
                         {
@@ -545,7 +545,7 @@
                           "type": "frame",
                           "id": "G1N5k",
                           "name": "todayBar",
-                          "width": 220,
+                          "width": 300,
                           "height": 6,
                           "fill": "#23302F",
                           "cornerRadius": 6,
@@ -732,8 +732,8 @@
                           "type": "frame",
                           "id": "8UnOM",
                           "name": "tomorrowRainChance",
-                          "width": 120,
-                          "height": 65,
+                          "width": 249,
+                          "height": 70,
                           "fill": "#24302F",
                           "cornerRadius": 12,
                           "stroke": {
@@ -749,7 +749,7 @@
                               "y": 33,
                               "name": "value",
                               "fill": "#E6ECEB",
-                              "content": "32°C",
+                              "content": "60%",
                               "fontFamily": "Inter",
                               "fontSize": 18,
                               "fontWeight": "normal"
@@ -761,47 +761,7 @@
                               "y": 8,
                               "name": "label",
                               "fill": "#9FB2B0",
-                              "content": "Max Temperture",
-                              "fontFamily": "Inter",
-                              "fontSize": 12,
-                              "fontWeight": "normal"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "frame",
-                          "id": "2TLOa",
-                          "name": "tomorrowRainChance",
-                          "width": 120,
-                          "height": 65,
-                          "fill": "#24302F",
-                          "cornerRadius": 12,
-                          "stroke": {
-                            "align": "inside",
-                            "thickness": 1
-                          },
-                          "layout": "none",
-                          "children": [
-                            {
-                              "type": "text",
-                              "id": "s3ArT",
-                              "x": 12,
-                              "y": 33,
-                              "name": "value",
-                              "fill": "#E6ECEB",
-                              "content": "20°C",
-                              "fontFamily": "Inter",
-                              "fontSize": 18,
-                              "fontWeight": "normal"
-                            },
-                            {
-                              "type": "text",
-                              "id": "U7apN",
-                              "x": 12,
-                              "y": 8,
-                              "name": "label",
-                              "fill": "#9FB2B0",
-                              "content": "Min Temperture",
+                              "content": "Chance of Rain",
                               "fontFamily": "Inter",
                               "fontSize": 12,
                               "fontWeight": "normal"
@@ -1111,7 +1071,7 @@
         },
         {
           "type": "frame",
-          "id": "CaWeh",
+          "id": "oQUP1",
           "x": 820,
           "y": 150,
           "name": "rightCol",
@@ -1122,7 +1082,7 @@
           "children": [
             {
               "type": "frame",
-              "id": "enH6H",
+              "id": "L15kv",
               "name": "card1",
               "width": 550,
               "height": 135,
@@ -1132,7 +1092,7 @@
               "children": [
                 {
                   "type": "rectangle",
-                  "id": "jYR6k",
+                  "id": "CIB1k",
                   "x": 20,
                   "y": 20,
                   "name": "card1Divider",
@@ -1142,7 +1102,7 @@
                 },
                 {
                   "type": "frame",
-                  "id": "nz4iu",
+                  "id": "Nm4zS",
                   "x": 20,
                   "y": 35,
                   "name": "hoursRow",
@@ -1153,7 +1113,7 @@
                   "children": [
                     {
                       "type": "frame",
-                      "id": "hqy1F",
+                      "id": "a4RU6",
                       "name": "itemNow",
                       "width": 70,
                       "height": 90,
@@ -1163,7 +1123,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "id": "h9y6P",
+                          "id": "roIHT",
                           "name": "nowTime",
                           "fill": "#C8D2CF",
                           "content": "Now",
@@ -1173,7 +1133,7 @@
                         },
                         {
                           "type": "frame",
-                          "id": "vx8s6",
+                          "id": "Yr8r7",
                           "name": "todayImg",
                           "width": 28,
                           "height": 24,
@@ -1187,7 +1147,7 @@
                         },
                         {
                           "type": "text",
-                          "id": "C8pWy",
+                          "id": "qafj7",
                           "name": "nowTemp",
                           "fill": "#E6ECEB",
                           "content": "23°C",
@@ -1199,7 +1159,7 @@
                     },
                     {
                       "type": "frame",
-                      "id": "HO6u0",
+                      "id": "mZoNg",
                       "name": "item00",
                       "width": 70,
                       "height": 90,
@@ -1209,7 +1169,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "id": "yk6Hz",
+                          "id": "CPr3c",
                           "name": "zeroTime",
                           "fill": "#C8D2CF",
                           "content": "00",
@@ -1219,7 +1179,7 @@
                         },
                         {
                           "type": "frame",
-                          "id": "AbPkA",
+                          "id": "oWmwE",
                           "name": "satImg",
                           "width": 28,
                           "height": 28,
@@ -1233,7 +1193,7 @@
                         },
                         {
                           "type": "text",
-                          "id": "mRHV7",
+                          "id": "U7shk",
                           "name": "zeroTemp",
                           "fill": "#E6ECEB",
                           "content": "21°C",
@@ -1245,7 +1205,7 @@
                     },
                     {
                       "type": "frame",
-                      "id": "aNnw9",
+                      "id": "aSEKk",
                       "name": "item01",
                       "width": 70,
                       "height": 90,
@@ -1255,7 +1215,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "id": "SnE4q",
+                          "id": "PINjJ",
                           "name": "oneTime",
                           "fill": "#C8D2CF",
                           "content": "01",
@@ -1265,7 +1225,7 @@
                         },
                         {
                           "type": "frame",
-                          "id": "pwXzq",
+                          "id": "aKz3M",
                           "name": "satImg",
                           "width": 28,
                           "height": 28,
@@ -1279,7 +1239,7 @@
                         },
                         {
                           "type": "text",
-                          "id": "xb7Os",
+                          "id": "OmDz9",
                           "name": "oneTemp",
                           "fill": "#E6ECEB",
                           "content": "20°C",
@@ -1291,7 +1251,7 @@
                     },
                     {
                       "type": "frame",
-                      "id": "aP3Xj",
+                      "id": "MniM6",
                       "name": "item02",
                       "width": 70,
                       "height": 90,
@@ -1301,7 +1261,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "id": "NuXwE",
+                          "id": "EuVrR",
                           "name": "twoTime",
                           "fill": "#C8D2CF",
                           "content": "02",
@@ -1311,7 +1271,7 @@
                         },
                         {
                           "type": "frame",
-                          "id": "FP1yf",
+                          "id": "7omMT",
                           "name": "satImg",
                           "width": 28,
                           "height": 28,
@@ -1325,7 +1285,7 @@
                         },
                         {
                           "type": "text",
-                          "id": "Pce4o",
+                          "id": "1z0Dh",
                           "name": "twoTemp",
                           "fill": "#E6ECEB",
                           "content": "20°C",
@@ -1337,7 +1297,7 @@
                     },
                     {
                       "type": "frame",
-                      "id": "RuCH1",
+                      "id": "jU8bJ",
                       "name": "item03",
                       "width": 70,
                       "height": 90,
@@ -1347,7 +1307,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "id": "xC2WD",
+                          "id": "nCyLW",
                           "name": "threeTime",
                           "fill": "#C8D2CF",
                           "content": "03",
@@ -1357,7 +1317,7 @@
                         },
                         {
                           "type": "frame",
-                          "id": "hNewQ",
+                          "id": "nAGOT",
                           "name": "satImg",
                           "width": 28,
                           "height": 28,
@@ -1371,7 +1331,7 @@
                         },
                         {
                           "type": "text",
-                          "id": "bvNTS",
+                          "id": "uhDuk",
                           "name": "threeTemp",
                           "fill": "#E6ECEB",
                           "content": "23°C",
@@ -1383,7 +1343,7 @@
                     },
                     {
                       "type": "frame",
-                      "id": "SPzS8",
+                      "id": "yggnF",
                       "name": "item04",
                       "width": 70,
                       "height": 90,
@@ -1393,7 +1353,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "id": "LAzsr",
+                          "id": "l9vWA",
                           "name": "fourTime",
                           "fill": "#C8D2CF",
                           "content": "04",
@@ -1403,7 +1363,7 @@
                         },
                         {
                           "type": "frame",
-                          "id": "ls4Mb",
+                          "id": "57gjZ",
                           "name": "satImg",
                           "rotation": -0.19565057875862804,
                           "width": 28,
@@ -1418,7 +1378,7 @@
                         },
                         {
                           "type": "text",
-                          "id": "n6nLm",
+                          "id": "Fx8uw",
                           "name": "fourTemp",
                           "fill": "#E6ECEB",
                           "content": "23°C",
@@ -1434,7 +1394,7 @@
             },
             {
               "type": "frame",
-              "id": "M8MNZ",
+              "id": "NGDZC",
               "name": "card2",
               "width": 550,
               "height": 300,
@@ -1446,36 +1406,36 @@
               "children": [
                 {
                   "type": "text",
-                  "id": "hYKbP",
+                  "id": "LT9d7",
                   "name": "card2Title",
                   "fill": "#E6ECEB",
-                  "content": "Today's Highlights",
+                  "content": "Today & Tomorrow's Highlights",
                   "fontFamily": "Inter",
                   "fontSize": 16,
                   "fontWeight": "normal"
                 },
                 {
                   "type": "frame",
-                  "id": "0aj0T",
+                  "id": "bNhc2",
                   "name": "forecastList",
                   "width": "fill_container",
                   "height": 41,
                   "layout": "vertical",
-                  "gap": 16,
+                  "gap": 14,
                   "children": [
                     {
                       "type": "frame",
-                      "id": "MrxL4",
+                      "id": "7xqsN",
                       "name": "rowToday",
                       "width": "fill_container",
                       "height": 36,
-                      "gap": 12,
-                      "justifyContent": "space_between",
+                      "gap": 55,
+                      "justifyContent": "center",
                       "alignItems": "center",
                       "children": [
                         {
                           "type": "text",
-                          "id": "nZNMj",
+                          "id": "nETzV",
                           "name": "todayMin",
                           "fill": "#C7D1CF",
                           "content": "18°C",
@@ -1485,9 +1445,9 @@
                         },
                         {
                           "type": "frame",
-                          "id": "1Jd4T",
+                          "id": "AcKnm",
                           "name": "todayBar",
-                          "width": 220,
+                          "width": 300,
                           "height": 6,
                           "fill": "#23302F",
                           "cornerRadius": 6,
@@ -1495,7 +1455,7 @@
                           "children": [
                             {
                               "type": "frame",
-                              "id": "RsEMF",
+                              "id": "1VQ7t",
                               "x": 0,
                               "y": 0,
                               "name": "todayFill",
@@ -1506,7 +1466,7 @@
                             },
                             {
                               "type": "ellipse",
-                              "id": "KS2Od",
+                              "id": "M9jU0",
                               "x": 0,
                               "y": 0,
                               "name": "knob1",
@@ -1518,7 +1478,7 @@
                         },
                         {
                           "type": "text",
-                          "id": "lySt9",
+                          "id": "Fjdzm",
                           "name": "todayMax",
                           "fill": "#E6ECEB",
                           "content": "32°C",
@@ -1532,7 +1492,7 @@
                 },
                 {
                   "type": "frame",
-                  "id": "5GIjE",
+                  "id": "ur4LF",
                   "name": "card2Grid",
                   "width": "fill_container",
                   "height": "fill_container",
@@ -1541,7 +1501,7 @@
                   "children": [
                     {
                       "type": "frame",
-                      "id": "sJQdE",
+                      "id": "Kl7c6",
                       "name": "rowA",
                       "width": "fill_container",
                       "height": "fit_content(70)",
@@ -1549,7 +1509,7 @@
                       "children": [
                         {
                           "type": "frame",
-                          "id": "GoWKs",
+                          "id": "iwJWS",
                           "x": 0,
                           "y": 0,
                           "name": "tomorrowCondition",
@@ -1561,7 +1521,7 @@
                           "children": [
                             {
                               "type": "text",
-                              "id": "8cDbp",
+                              "id": "5c4dl",
                               "x": 12,
                               "y": 12,
                               "name": "label",
@@ -1573,7 +1533,7 @@
                             },
                             {
                               "type": "text",
-                              "id": "TMatN",
+                              "id": "gsn5z",
                               "x": 12,
                               "y": 33,
                               "name": "value",
@@ -1587,7 +1547,7 @@
                         },
                         {
                           "type": "frame",
-                          "id": "T6ziz",
+                          "id": "fdsn9",
                           "x": 261,
                           "y": 0,
                           "name": "tomorrowHumidity",
@@ -1601,7 +1561,7 @@
                           "children": [
                             {
                               "type": "text",
-                              "id": "fT5qq",
+                              "id": "oojPg",
                               "name": "label",
                               "fill": "#9FB2B0",
                               "content": "Relative Humidity",
@@ -1611,7 +1571,7 @@
                             },
                             {
                               "type": "text",
-                              "id": "EP2W6",
+                              "id": "4ZD9t",
                               "name": "value",
                               "fill": "#E6ECEB",
                               "content": "84%",
@@ -1625,14 +1585,14 @@
                     },
                     {
                       "type": "frame",
-                      "id": "Qrkij",
+                      "id": "HumyQ",
                       "name": "rowB",
                       "width": "fill_container",
                       "gap": 12,
                       "children": [
                         {
                           "type": "frame",
-                          "id": "a84GZ",
+                          "id": "JJ7RN",
                           "name": "tomorrowComfort",
                           "width": "fill_container",
                           "height": 70,
@@ -1642,7 +1602,7 @@
                           "children": [
                             {
                               "type": "text",
-                              "id": "Xn2W0",
+                              "id": "1e1m4",
                               "x": 12,
                               "y": 12,
                               "name": "label",
@@ -1654,7 +1614,7 @@
                             },
                             {
                               "type": "text",
-                              "id": "75KL1",
+                              "id": "WOf7F",
                               "x": 12.055235996223105,
                               "y": 33,
                               "name": "value",
@@ -1672,10 +1632,10 @@
                         },
                         {
                           "type": "frame",
-                          "id": "uBwnh",
+                          "id": "AYYOO",
                           "name": "tomorrowRainChance",
-                          "width": 120,
-                          "height": 65,
+                          "width": 249,
+                          "height": 70,
                           "fill": "#24302F",
                           "cornerRadius": 12,
                           "stroke": {
@@ -1686,64 +1646,24 @@
                           "children": [
                             {
                               "type": "text",
-                              "id": "gwvxg",
+                              "id": "eIKTh",
                               "x": 12,
                               "y": 33,
                               "name": "value",
                               "fill": "#E6ECEB",
-                              "content": "32°C",
+                              "content": "60%",
                               "fontFamily": "Inter",
                               "fontSize": 18,
                               "fontWeight": "normal"
                             },
                             {
                               "type": "text",
-                              "id": "hvPw9",
+                              "id": "tbaN8",
                               "x": 12,
                               "y": 8,
                               "name": "label",
                               "fill": "#9FB2B0",
-                              "content": "Max Temperture",
-                              "fontFamily": "Inter",
-                              "fontSize": 12,
-                              "fontWeight": "normal"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "frame",
-                          "id": "N18v6",
-                          "name": "tomorrowRainChance",
-                          "width": 120,
-                          "height": 65,
-                          "fill": "#24302F",
-                          "cornerRadius": 12,
-                          "stroke": {
-                            "align": "inside",
-                            "thickness": 1
-                          },
-                          "layout": "none",
-                          "children": [
-                            {
-                              "type": "text",
-                              "id": "dyb6r",
-                              "x": 12,
-                              "y": 33,
-                              "name": "value",
-                              "fill": "#E6ECEB",
-                              "content": "20°C",
-                              "fontFamily": "Inter",
-                              "fontSize": 18,
-                              "fontWeight": "normal"
-                            },
-                            {
-                              "type": "text",
-                              "id": "YBPPX",
-                              "x": 12,
-                              "y": 8,
-                              "name": "label",
-                              "fill": "#9FB2B0",
-                              "content": "Min Temperture",
+                              "content": "Chance of Rain",
                               "fontFamily": "Inter",
                               "fontSize": 12,
                               "fontWeight": "normal"
