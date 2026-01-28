@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -11,16 +11,16 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="weather-icons.css" />
   </head>
   <body>
     <div class="screen forecast">
       <div class="overlay"></div>
 
-      <header class="top">
-        <div class="brand">weather.com</div>
-        <nav class="nav">
-          <span class="pill">Home</span>
-          <span class="pill active">Forecast</span>
+      <header class="nav-bar">
+        <nav class="nav-bar__menu">
+          <button id="homePageBtn" type="button" class="nav-bar__btn btn">首頁</button>
+          <button id="forecastPageBtn" type="button" class="nav-bar__btn btn">天氣預報</button>
         </nav>
       </header>
 
@@ -192,5 +192,7 @@
         </article>
       </section>
     </div>
+    <script type="module" src="/src/main.js"></script>
+    <script type="module" src="/src/render.js"></script>
   </body>
 </html>
