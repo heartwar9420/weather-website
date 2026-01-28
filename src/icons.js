@@ -4,7 +4,7 @@
 // 這樣你的 HTML 就不會被這些落落長的代碼淹沒了
 const svgLibrary = {
   // 1. 晴天
-  sunny: `
+  Sunny: `
     <svg class="weather-svg spinning-sun" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
       <g fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
         <circle cx="32" cy="32" r="14" />
@@ -23,7 +23,7 @@ const svgLibrary = {
   `,
 
   // 2. 陰天
-  cloudy: `
+  Cloudy: `
     <svg class="weather-svg floating-cloud" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
       <path 
         d="M48,28c0-8.8-7.2-16-16-16c-6.8,0-12.6,4.3-15,10.4C16.4,22.1,16,22,15.5,22C9.7,22,5,26.7,5,32.5
@@ -33,7 +33,7 @@ const svgLibrary = {
   `,
 
   // 3. 雨天
-  rainy: `
+  Rainy: `
     <svg class="weather-svg" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
       <path 
         d="M48,28c0-8.8-7.2-16-16-16c-6.8,0-12.6,4.3-15,10.4C16.4,22.1,16,22,15.5,22C9.7,22,5,26.7,5,32.5
@@ -48,7 +48,7 @@ const svgLibrary = {
   `,
 
   // 4. 雷雨 (三道黃色閃電版)
-  thunder: `
+  Thunder: `
     <svg class="weather-svg" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
       <path 
         d="M48,28c0-8.8-7.2-16-16-16c-6.8,0-12.6,4.3-15,10.4C16.4,22.1,16,22,15.5,22C9.7,22,5,26.7,5,32.5
@@ -67,5 +67,5 @@ const svgLibrary = {
 // 我們匯出一個函式，你給它天氣名稱，它吐給你 SVG 字串
 // 如果找不到對應的圖示，預設給陰天 (cloudy)
 export function getIcon(weatherType) {
-  return svgLibrary[weatherType] || svgLibrary.cloudy;
+  return svgLibrary[weatherType] || svgLibrary.Cloudy;
 }

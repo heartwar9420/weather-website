@@ -1,7 +1,7 @@
 // Card 1
 import { getIcon } from './icons.js'; // 引入函式
 
-export function renderHourlyForecast(hoursData = [], selector = '.hourly-forecast') {
+export function renderHourlyForecast(hoursData, selector = '.hourly-forecast') {
   const container = document.querySelector(selector);
 
   if (!container) return;
@@ -18,17 +18,19 @@ export function renderHourlyForecast(hoursData = [], selector = '.hourly-forecas
 
   let html = '';
 
-  hoursData.forEach((item) => {
-    // 呼叫 getIcon(item.type) 拿到 SVG 字串
+  // 呼叫 getIcon(item.type) 拿到 SVG 字串
+  let obj = {};
+  obj = hoursData.renderData;
+  Object.entries(obj).forEach(([key, value]) => {
     html += `
             <div class="hourly-forecast__item">
-                <div class="hourly-forecast__time">${item.time}</div>
+                <div class="hourly-forecast__time">${key}</div>
                 
                 <div class="icon icon--small">
-                    ${getIcon(item.type)} 
+                    ${getIcon(value[0])} 
                 </div>
                 
-                <div class="hourly-forecast__temp">${item.temp}</div>
+                <div class="hourly-forecast__temp">${value[1]}</div>
             </div>
         `;
   });
