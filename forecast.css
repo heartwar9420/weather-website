@@ -19,7 +19,7 @@
 }
 
 .forecast-list {
-  max-width: 850px;
+  max-width: 900px;
   width: 100%;
   margin: 0 auto 0;
   display: flex;
@@ -47,6 +47,7 @@
 .day-item__weekday {
   margin-bottom: 4px;
 }
+
 
 .forecast-list__icon {
   width: 36px;
