@@ -1,5 +1,5 @@
 const BASE_URL = "https://opendata.cwa.gov.tw/api/v1/rest/datastore";
-const AUTH = "rdec-key-123-45678-011121314";
+const AUTH = "CWA-953B2897-2C88-45A0-85EF-0059DB66235E";
 
 // ==============================
 // 全台縣市 → 代表觀測站（O-A0003-001）

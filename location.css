@@ -116,18 +116,20 @@
 
 /** focus **/
 .focus {
+  border-radius: 50%;
   margin-top: 20px;
   width: 50px ;
   height: 50px ;
   border: none;
   background: transparent;
-  background-image: url("/design/icons/focus.png");
+  background-image: url("./design/icons/focus.png");
   background-size: cover; /* 按比例放大並裁切圖片以填滿容器 */
   background-position: center top; /* 以中央對齊裁切 */
   cursor: pointer;
   transition: transform 0.3s ease-in-out;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));;
 }
 
 .focus:hover {
-  transform: rotate(90deg);
+  transform: rotate(90deg) scale(1.2);
 }
