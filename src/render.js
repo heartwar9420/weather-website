@@ -107,6 +107,7 @@ export function renderDailySummary(data) {
 // renderForecast
 
 export function renderForecast(data,selector = '.forecast-list'){
+  console.log(data)
   const container = document.querySelector(selector);
   const subtitle = document.querySelector(".subtitle");
   if (!container) return;
@@ -210,4 +211,181 @@ export function renderLocationPopup(data){
         <li>💧 相對濕度｜${data.RelativeHumidity}%</li>
         <li>☀️ 紫外線指數｜${data.UVIndex}</li>
       </ul>`
+}
+
+export function renderFakeData(){
+  const CurrentWeatherData = {
+    renderData: {
+      T: 17,
+    },
+    UIData: {
+      Weather: "陰有雷雨"
+    }
+  }
+  renderCurrentWeather(CurrentWeatherData)
+
+  const HourlyForecastData = {
+    "ok": true,
+    "renderData": [{
+            "time": "now",
+            "icon": "Cloudy",
+            "temp": "22"
+        },
+        {
+            "time": "18",
+            "icon": "Sunny",
+            "temp": "22"
+        },
+        {
+            "time": "19",
+            "icon": "Rainy",
+            "temp": "21"
+        },
+        {
+            "time": "20",
+            "icon": "Rainy",
+            "temp": "20"
+        },
+        {
+            "time": "21",
+            "icon": "Thunder",
+            "temp": "20"
+        },
+        {
+            "time": "22",
+            "icon": "Thunder",
+            "temp": "20"
+        }
+    ]
+}
+  renderHourlyForecast(HourlyForecastData)
+
+  const dailySummaryData = {
+    "ok": true,
+    "renderData": {
+        "minT": "16",
+        "maxT": "22",
+        "barLeft": "40",
+        "barWidth": "40",
+        "weather": "陰有雷雨",
+        "comfortIndex": "稍有寒意至舒適",
+        "chanceOfRain": "80"
+    }
+}
+  renderDailySummary(dailySummaryData)
+}
+
+export function renderFakeForecast(){
+  const fakeForecast = {
+    "ok": true,
+    "renderData": {
+        "星期五": [
+            "1/30",
+            "Cloudy",
+            "多雲時陰",
+            {
+                "最高溫": 22,
+                "最低溫": 19
+            },
+            {
+                "降雨機率": 20
+            },
+            {
+                "風速": 3
+            }
+        ],
+        "星期六": [
+            "1/31",
+            "Rainy",
+            "陰短暫雨",
+            {
+                "最高溫": 19,
+                "最低溫": 15
+            },
+            {
+                "降雨機率": 60
+            },
+            {
+                "風速": 3
+            }
+        ],
+        "星期日": [
+            "2/1",
+            "Rainy",
+            "陰短暫雨",
+            {
+                "最高溫": 16,
+                "最低溫": 14
+            },
+            {
+                "降雨機率": 30
+            },
+            {
+                "風速": 4.5
+            }
+        ],
+        "星期一": [
+            "2/2",
+            "Rainy",
+            "陰短暫雨",
+            {
+                "最高溫": 17,
+                "最低溫": 14
+            },
+            {
+                "降雨機率": 30
+            },
+            {
+                "風速": 4
+            }
+        ],
+        "星期二": [
+            "2/3",
+            "Cloudy",
+            "陰時多雲",
+            {
+                "最高溫": 20,
+                "最低溫": 15
+            },
+            {
+                "降雨機率": "--"
+            },
+            {
+                "風速": 3
+            }
+        ],
+        "星期三": [
+            "2/4",
+            "Sunny",
+            "晴",
+            {
+                "最高溫": 23,
+                "最低溫": 15
+            },
+            {
+                "降雨機率": "--"
+            },
+            {
+                "風速": 2
+            }
+        ],
+        "星期四": [
+            "2/5",
+            "Sunny",
+            "晴",
+            {
+                "最高溫": 23,
+                "最低溫": 15
+            },
+            {
+                "降雨機率": "--"
+            },
+            {
+                "風速": 1
+            }
+        ],
+        "比奇堡": "比奇堡"
+    }
+}
+  renderForecast(fakeForecast)
 }
