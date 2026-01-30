@@ -99,8 +99,7 @@ const particlesOptions = {
     },
     sunny:{
         // background: {
-        //     /* 使用你圖片中的亮藍色漸層 */
-        //     color: "#4facfe" 
+        //     color: "#4facfe"  // 天藍色
         // },
         fullScreen: { enable: true, zIndex: 2},
         particles: {
@@ -181,7 +180,7 @@ const particlesOptions = {
                 }
             },
             size: {
-                value: { min: 1, max: 3 } // 星星要小，才有距離感
+                value: { min: 1, max: 3 }
             },
             move: {
                 enable: true,
@@ -282,9 +281,23 @@ const WeatherManager = {
     }
 };
 
+// 雲朵圖片預載
+function preLoadCloudImg(){
+    const cloudUrls = [
+        "./design/background/cloud1.png", 
+        "./design/background/cloud2.png", 
+        "./design/background/cloud3.png"]
+    
+    cloudUrls.forEach(url =>{
+        image = new image()
+        image.src = url
+    })
+}
+
 
 // 預設模式：晴
 function initDefalueBackground(Wx){
+    preLoadCloudImg()
     WeatherManager.update(Wx) 
 }
 initDefalueBackground("晴")//預設晴天
