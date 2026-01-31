@@ -2,7 +2,7 @@
 
 **網址**： https://rachell-tech.github.io/weather-website/index.html
 
-![iWeather Main Demo](https://github.com/user-attachments/assets/869c4c21-80ee-4991-a3c8-df8c1d6ed82d)
+![iWeather Main Demo](https://github.com/user-attachments/assets/3d1a2c30-a62d-4b6a-8900-0df4bd0b9979)
 
 > 一個基於氣象局 API 的動態天氣預報平台，整合即時天氣特效與視覺化數據。
 
