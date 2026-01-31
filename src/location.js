@@ -11,14 +11,10 @@ export function initLocationDropdown(city) {
     const currentCity = window.city;
     const prevCity = normalizeCity(button.textContent);
 
-    if (!window.city) {
-        window.city = currentCity;
-    }
-
     if (currentCity && currentCity !== prevCity) {
         let matchedItem = null;
         dropdown.querySelectorAll(".dropdown-item").forEach((item) => {
-            const itemCity = normalizeCity(item.dataset.location || item.textContent);
+            const itemCity = item.dataset.location || item.textContent;
             if (itemCity === currentCity) matchedItem = item;
         });
 
@@ -31,7 +27,7 @@ export function initLocationDropdown(city) {
 
             // 移除清單中與 currentCity 相同的項目，避免重複
             dropdown.querySelectorAll(".dropdown-item").forEach((item) => {
-                const itemCity = normalizeCity(item.dataset.location || item.textContent);
+                const itemCity = item.dataset.location || item.textContent;
                 if (itemCity === currentCity) item.remove();
             });
 
@@ -63,7 +59,7 @@ export function initLocationDropdown(city) {
         });
     }
 
-    // 點按鈕：開/關選單（看你 CSS 是否用 .active 控制）
+    // 點按鈕：開/關選單
     button.addEventListener("click", (e) => {
         e.preventDefault();
         dropdown.classList.toggle("active");
