@@ -1,3 +1,5 @@
+//! 這個是給模擬器專用的檔案～
+
 /**
  * 控制粒子層的開關
  * @param {string} id - HTML 元素的 ID (例如 'tsparticles-rain')
@@ -26,13 +28,12 @@ async function toggleParticles(id, options, show) {
             id: id,
             options: options
         });
-        // console.log(`${id} 已啟動`);
+        console.log(`${id} 已啟動`);
     } else {
         // 如果要關閉，且目前「正在跑」，就摧毀它
         if (currentContainer) {
             currentContainer.destroy(); // 徹底銷毀並清空畫布
-            // console.log(`${id} 已關閉`)
-        }
+            console.log(`${id} 已關閉`);}
     }
 }
 
@@ -99,7 +100,8 @@ const particlesOptions = {
     },
     sunny:{
         // background: {
-        //     color: "#4facfe"  // 天藍色
+        //     /* 使用你圖片中的亮藍色漸層 */
+        //     color: "#4facfe" 
         // },
         fullScreen: { enable: true, zIndex: 2},
         particles: {
@@ -117,7 +119,7 @@ const particlesOptions = {
                         { src: "./design/background/cloud1.png", width: 100, height: 100 },
                         { src: "./design/background/cloud2.png", width: 100, height: 100 },
                         { src: "./design/background/cloud3.png", width: 100, height: 100 },
-                        // { src: "./design/background/cloud4.png", width: 100, height: 100 }
+                        // { src: "/design/background/cloud4.png", width: 100, height: 100 }
                     ]
                 }
             },
@@ -180,7 +182,7 @@ const particlesOptions = {
                 }
             },
             size: {
-                value: { min: 1, max: 3 }
+                value: { min: 1, max: 3 } // 星星要小，才有距離感
             },
             move: {
                 enable: true,
@@ -194,16 +196,58 @@ const particlesOptions = {
     }
 }
 
-//! 白天晚上判斷
-function isDayTime(){
-    const now = new Date()
-    const hour = now.getHours()
-    // 假設18:00以後就是晚上
-    if (hour > 5 && hour < 18){
-        return true
-    }
-    return false //TODO 可以更動這個函式的回傳直來測試 白天/夜間 模式
-};
+// //! 白天晚上判斷
+// function isDayTime(){
+//     const now = new Date()
+//     const hour = now.getHours()
+//     // 假設18:00以後就是晚上
+//     if (hour > 5 && hour < 18){
+//         return true
+//     }
+//     return false //TODO 可以更動這個函式的回傳直來測試 白天/夜間 模式
+// };
+
+//! 晝夜切換器
+/**
+ * 使用立即執行函式 (IIFE) 建立一個私有作用域
+ * 這樣 isDay 變數就不會被全域污染
+ */
+const DayNightController = (() => {
+    let isDay = true; // 預設為白天
+
+    return {
+        // 獲取目前狀態
+        getState: () => isDay,
+        // 切換狀態
+        toggle: () => {
+            isDay = !isDay;
+            console.log(`系統切換至: ${isDay ? "白天" : "夜晚"}`);
+            return isDay;
+        }
+    };
+})();
+
+// --- 保持原本的函式名稱，讓 WeatherManager 不必修改 ---
+function isDayTime() {
+    return DayNightController.getState();
+}
+
+/**
+ * 模擬器按鈕專用的切換函式
+ */
+function handleDayNightToggle() {
+    // 1. 切換內部狀態
+    DayNightController.toggle();
+    
+    // 2. 更新畫面上的文字提示
+    updateTimeDisplay();
+    
+    // 3. 關鍵：切換後要手動觸發一次更新，否則畫布不會即時變換
+    // 我們可以抓取目前的輸入值，或是簡單用「晴」來測試
+    WeatherManager.update("晴"); 
+}
+
+
 
 
 // 天氣特效控制中心(總開關)
@@ -281,6 +325,14 @@ const WeatherManager = {
     }
 };
 
+// 在頁面載入後顯示目前是白天還是晚上
+function updateTimeDisplay() {
+    const status = document.getElementById("time-status");
+    if (status) {
+        status.innerText = isDayTime() ? "🌞 白天 (18:00前)" : "🌙 晚上 (18:00後)";
+    }
+}
+
 // 雲朵圖片預載
 function preLoadCloudImg(){
     const cloudUrls = [
@@ -295,9 +347,12 @@ function preLoadCloudImg(){
 }
 
 
-// 預設模式：晴
-function initDefalueBackground(Wx){
+// 初始執行一次
+function initSimulator(){
     preLoadCloudImg()
-    WeatherManager.update(Wx) 
+    updateTimeDisplay();
+    WeatherManager.update("晴") //預設晴天
 }
-initDefalueBackground("晴")//預設晴天
+initSimulator()
+
+
